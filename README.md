@@ -1,0 +1,2 @@
+# dockerself
+:whale: runtime dockerizer
