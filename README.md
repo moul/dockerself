@@ -1,6 +1,8 @@
 # dockerself
 :whale: runtime dockerizer
 
+![](https://manfredtouron.com/uploads/2019/02/14/dockerself.png)
+
 This is a PoC of a go program that calls the Docker API, inject itself (the binary) and switch to Docker for the execution.
 
 It's like `syscall.Exec` within Docker.
