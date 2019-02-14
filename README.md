@@ -18,17 +18,17 @@ import (
 )
 
 func main() {
-    dockerize := flag.Bool("dockerize", false, "dockerize")
-    flag.Parse()
-	  if *dockerize {
-		    dockerself.Dockerize("ubuntu")
-        return
+        dockerize := flag.Bool("dockerize", false, "dockerize")
+        flag.Parse()
+	    if *dockerize {
+		        dockerself.Dockerize("ubuntu")
+                return
 		}
-    if dockerize.WithinDocker() {
-        fmt.Println("I'm inside the matrix (docker)")
-    } else {
-        fmt.Println("I'm in the real world :(")
-    }
+        if dockerize.WithinDocker() {
+                fmt.Println("I'm inside the matrix (docker)")
+        } else {
+                fmt.Println("I'm in the real world :(")
+        }
 }
 ```
 
