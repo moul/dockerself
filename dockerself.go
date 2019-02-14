@@ -121,3 +121,8 @@ func Dockerize(image string) error {
 	// exit to avoid running the same code again
 	return nil
 }
+
+func WithinDocker() bool {
+	_, err := os.Stat("/.dockerenv")
+	return !os.IsNotExist(err)
+}

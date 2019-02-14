@@ -23,6 +23,7 @@ func main() {
 	}
 
 	fmt.Println("# dockerself-example")
+	fmt.Printf("within docker: %v\n", dockerself.WithinDocker())
 	fmt.Printf("env: %+v\n", os.Environ())
 	fmt.Println("starting interactive `/bin/sh` session...")
 	cmd := exec.Command("/bin/sh")
